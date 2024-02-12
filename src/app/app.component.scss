@@ -1,0 +1,77 @@
+.container-fluid {
+    background: #f8cb74;
+}
+
+.profile {
+    height: 350px;
+    position: relative;
+
+    .myPic {
+        background: #000;
+        border-radius: 100px;
+        text-align: center;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        border: 10px solid #383636;
+        margin-left: 80px;
+        margin-top: 48px;
+    }
+
+    .myPic img {
+        object-fit: cover;
+        max-width: 110%;
+        max-height: 100%;
+        position: relative;
+        z-index: 9;
+    }
+
+    .getResume {
+        margin: 35px 0 0 120px;
+        background-color: #f8cb74;
+        color: black;
+        border: 2px solid #383636;
+        border-radius: 20px;
+    }
+
+    .getResume:hover {
+        background-color: #000;
+        color: #f8cb74;
+    }
+
+    .profileDesc {
+        background: #000;
+        border-radius: 8px;
+        border: 10px solid #383636;
+        padding: 15px;
+        margin-top: 40px;
+
+        h2,
+        p,
+        span {
+            color: #f8cb74;
+        }
+
+        hr {
+            color: #f8cb74;
+            border-top: dashed 1px;
+        }
+
+        .handles {
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 20px;
+
+                img {
+                    width: 22px;
+                }
+            }
+        }
+    }
+
+}
