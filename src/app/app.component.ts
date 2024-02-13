@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hiranmoy_Portfolio';
+  pdfUrl: any = 'assets/pdf/CV_Hiranmoy.pdf';
+  blobUrl: any;
+  a: any;
 
   getResume() {
-    const pdfUrl = 'assets/pdf/CV_Hiranmoy.pdf';
-    this.downloadFile(pdfUrl, 'CV_Hiranmoy');
+    this.downloadFile(this.pdfUrl, 'CV_Hiranmoy');
   }
 
   private downloadFile(url: string, fileName: string) {
@@ -18,22 +20,22 @@ export class AppComponent {
       .then(response => response.blob())
       .then(blob => {
         // Create a URL for the blob
-        const blobUrl = window.URL.createObjectURL(blob);
+        this.blobUrl = window.URL.createObjectURL(blob);
 
         // Create a link element
-        const a = document.createElement('a');
-        a.href = blobUrl;
-        a.download = fileName;
+        this.a = document.createElement('a');
+        this.a.href = this.blobUrl;
+        this.a.download = fileName;
 
         // Append the link element to the body
-        document.body.appendChild(a);
+        document.body.appendChild(this.a);
 
         // Trigger the click event on the link
-        a.click();
+        this.a.click();
 
         // Clean up: remove the link element and revoke the blob URL
-        window.URL.revokeObjectURL(blobUrl);
-        document.body.removeChild(a);
+        window.URL.revokeObjectURL(this.blobUrl);
+        document.body.removeChild(this.a);
       });
   }
 }

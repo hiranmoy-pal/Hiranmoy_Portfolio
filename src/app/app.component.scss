@@ -74,4 +74,31 @@
         }
     }
 
+    .animationBox {
+        background: #000;
+        border-radius: 40px;
+        border: 5px solid #383636;
+        padding: 2px;
+        margin-top: 25px;
+
+        h5 {
+            padding: 5px 10px 0px 10px;
+            color: #f8cb74;
+            // white-space: nowrap;
+            // overflow: hidden;
+            // position: relative;
+            // animation: moveLeft 10s linear infinite;
+
+            // @keyframes moveLeft {
+            //     0% {
+            //         transform: translateX(100%);
+            //     }
+
+            //     100% {
+            //         transform: translateX(-100%);
+            //     }
+            // }
+        }
+    }
+
 }
