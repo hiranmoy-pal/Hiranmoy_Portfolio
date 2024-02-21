@@ -38,4 +38,5 @@ export class AppComponent {
         document.body.removeChild(this.a);
       });
   }
+  
 }
