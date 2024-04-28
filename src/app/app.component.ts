@@ -10,6 +10,12 @@ export class AppComponent {
   pdfUrl: any = 'assets/pdf/CV_Hiranmoy.pdf';
   blobUrl: any;
   a: any;
+  aboutOpen: boolean = false;
+
+  constructor(
+  ) { }
+
+  /****************** Download Cv *********************/
 
   getResume() {
     this.downloadFile(this.pdfUrl, 'CV_Hiranmoy');
@@ -38,5 +44,19 @@ export class AppComponent {
         document.body.removeChild(this.a);
       });
   }
-  
+
+  /****************** Open About *********************/
+
+  toggleAbout() {
+    this.aboutOpen = !this.aboutOpen;
+    if (this.aboutOpen) {
+      setTimeout(() => {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+          aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }
+
 }

@@ -1,53 +1,71 @@
-<div class="container-fluid">
-  <div class="profile">
-    <div class="row">
-      <div class="profile_pic col-3">
-        <div class="myPic"><img src="assets/images/Hiranmoy.jpg" alt=""></div>
-        <button class="getResume" (click)="getResume()"><strong><em>Get Resume</em></strong></button>
-      </div>
-      <div class="col-9">
-        <div class="profileDesc">
-          <h2><strong>Hiranmoy Pal</strong></h2>
-          <p>Being innovative and hardworking, I would like to learn and earn in order to meet the common objectives of
-            the organisation as a whole by utilizing a positive approach in everything that I do.</p>
-          <hr>
-          <div class="handles">
-            <span>Handles to follow :</span>
-            <a href="https://www.facebook.com/profile.php?id=100010327479080&mibextid=2JQ9oc" target="_blank"
-              title="Facebook">
-              <img src="assets/images/fb.png" alt="Facebook share">
-            </a>
-            <a href="https://www.instagram.com/pal_hiranmoy99?igsh=dHFiemUwNGFjZjh1" target="_blank" title="Instagram">
-              <img src="assets/images/insta.jpg" alt="Instagram share">
-            </a>
-            <a href="https://x.com/HiranmoyPal10?t=k872V6YvcvSIZeSZs5G4Jg&s=09" target="_blank" title="Twitter">
-              <img src="assets/images/twitter-x-white-logo.png" alt="Twitter share">
-            </a>
-            <a href="https://www.linkedin.com/in/hiranmoypal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              target="_blank" title="LinkedIn">
-              <img src="assets/images/linkedIn.jpg" alt="LinkedIn share">
-            </a>
-          </div>
-        </div>
-        <div class="animationBox">
-          <h5>GRAPHIC Design • Creative Problem Solver • ART DIRECTION • Organiser of Information • Creative Direction •
-            Strategic thinker • GRAPHIC Design • Creative Problem Solver • ART DIRECTION • Organiser of Information •
-            Creative Direction • Strategic thinker • GRAPHIC Design • Creative Problem Solver • ART DIRECTION •
-            Organiser of Information • Creative Direction • Strategic thinker • </h5>
-        </div>
-      </div>
+<!-- *************************** Header Design ******************** -->
+<!-- <header class="header">
+  <a href="#" class="logo"></a>
+  <i class="fa fa-bars" id="menu-icon"></i>
+  <nav class="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header> -->
+
+<!-- ************************* Home **************************** -->
+<section class="home" id="home">
+  <div class="home-content">
+    <h3>Hi, Myself</h3>
+    <h1>Hiranmoy Pal</h1>
+    <h3>And I'm a <span>Software Engineer</span></h3>
+    <p>Being innovative and hardworking, I would like to learn and earn in order to meet the common objectives of the
+      organisation as a whole by utilizing a positive approach in everything that I do.</p>
+    <div class="social-media">
+      <a href="https://www.facebook.com/profile.php?id=100010327479080&mibextid=2JQ9oc" target="_blank"
+        title="Facebook">
+        <img src="assets/images/fb.png" alt="Facebook share">
+      </a>
+      <a href="https://www.instagram.com/pal_hiranmoy99?igsh=dHFiemUwNGFjZjh1" target="_blank" title="Instagram">
+        <img src="assets/images/insta.jpg" alt="Instagram share">
+      </a>
+      <a href="https://x.com/HiranmoyPal10?t=k872V6YvcvSIZeSZs5G4Jg&s=09" target="_blank" title="Twitter">
+        <img src="assets/images/twitter-x-white-logo.png" alt="Twitter share">
+      </a>
+      <a href="https://www.linkedin.com/in/hiranmoypal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        target="_blank" title="LinkedIn">
+        <img src="assets/images/linkedIn.jpg" alt="LinkedIn share">
+      </a>
     </div>
+    <button class="getResume" (click)="getResume()"><strong><em>Get Resume</em></strong></button>
   </div>
-  <div class="about">
-    <a href="">
-      <h2 class="h2---text">Ab</h2>
-      <div class="h2---o about">
-        <p class="paragraph">Hello, I'm Colin. <br>I’ve been in graphic design for
-          publicity and marketing for over 7 years. My design philosophy has always been one of clarity clarity of
-          message and art direction. Achieving a vision requires the discipline of restraint. Self-editing, non-stop
-          learning and humility are the cornerstones of my practice. <br><br>Let me help you tell your story. </p>
-      </div>
-      <h2 class="h2---text">UT</h2>
-    </a>
+  <div class="home-img">
+    <img src="assets/images/Hiranmoy.jpg" alt="">
   </div>
+</section>
+
+<!-- ************************* Animation **************************** -->
+
+<!-- <div class="animationBox">
+  <h5>GRAPHIC Design • Creative Problem Solver • ART DIRECTION • Organiser of Information • Creative Direction
+    •
+    Strategic thinker • GRAPHIC Design • Creative Problem Solver • ART DIRECTION • Organiser of Information •
+    Creative Direction • Strategic thinker • GRAPHIC Design • Creative Problem Solver • ART DIRECTION •
+    Organiser of Information • Creative Direction • Strategic thinker • </h5>
+</div> -->
+
+<!-- ************************* About **************************** -->
+
+<div class="aboutBtn" (click)="toggleAbout()">
+  <h1>ABOUT</h1>
 </div>
+
+<section *ngIf="aboutOpen" class="about" id="about">
+  <div class="about-img">
+    <img src="assets/images/Hiranmoy.jpg" alt="">
+  </div>
+  <div class="about-content">
+    <p>I am a Software Engineer with expertise
+      in
+      Front-end development, My knowledge of technologies such as Angular, Typescript, Ionic Framework, JavaScript,
+      HTML5 ,CSS3 and BootStrap5. <br>I am currently working at Rensol Technologies.</p>
+  </div>
+</section>
