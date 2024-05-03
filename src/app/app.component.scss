@@ -1,11 +1,12 @@
 section {
     min-height: 70vh;
-    padding: 7rem 10% 2rem;
+    padding: 3rem 10% 3rem;
 }
 
 /**************************Home*************************/
 
 .home {
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,11 +43,14 @@ section {
 
     .home-img img {
         width: 25vw;
-        // height: 40vh;
         max-width: 100%;
         object-fit: cover;
         position: relative;
         z-index: 9;
+    }
+
+    .home-img:hover {
+        border-color: var(--yellow-color);
     }
 
     @keyframes floatImage {
@@ -97,20 +101,19 @@ section {
     .getResume {
         display: inline-block;
         padding: 1rem 2.8rem;
-        background: var(--main-color);
+        color: var(--main-color);
+        background: var(--bg-color);
         border-radius: 4rem;
         box-shadow: 0 0 1rem var(--main-color);
         font-size: 1.6rem;
-        color: var(--bg-color);
         letter-spacing: .1rem;
         font-weight: 600;
         transition: .5s ease;
     }
 
     .getResume:hover {
-        // box-shadow: none;
-        color: var(--main-color);
-        background: var(--bg-color);
+        color: #000;
+        background: var(--snd-bg-color);
     }
 
 }
@@ -118,9 +121,9 @@ section {
 /**************************Animation*************************/
 
 .animationBox {
-    background: var(--main-color);
+    background: linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%);
     border-radius: 40px;
-    border: 5px solid #2d3939;
+    border: 3px solid #000;
     overflow: hidden;
     margin: 1rem 6rem 4.5rem 6rem;
     color: #000;
@@ -153,7 +156,7 @@ section {
     color: var(--main-color);
     background: #000;
     box-shadow: 0 0 1rem var(--main-color);
-    border: 5px solid #34d1d6;
+    border: 3px solid var(--yellow-color);
 }
 
 /**************************About*************************/
@@ -165,18 +168,18 @@ section {
     background: var(--bg-color);
 
     h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         font-weight: 700;
         line-height: 1.3;
-        padding: 30px;
+        padding: 20px;
         text-align: center;
         transition: all .5s linear;
     }
 }
 
 .aboutBtn:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
+    background: var(--yellow-color);
+    color: #000;
 }
 
 .about {
@@ -200,9 +203,12 @@ section {
         animation: floatImage 4s ease-in-out infinite;
     }
 
+    .about-img:hover {
+        border-color: var(--yellow-color);
+    }
+
     .about-img img {
         width: 80vw;
-        // height: 40vh;
         max-width: 100%;
         object-fit: cover;
         position: relative;
@@ -215,6 +221,9 @@ section {
         p {
             font-size: 1.6rem;
             margin: 2rem 0 3rem;
+            a {
+                color: #0a0080;
+            }
         }
     }
 
@@ -232,31 +241,30 @@ section {
 /**************************Services*************************/
 
 .servicesBtn {
-    margin-top: 30px;
-    // margin-bottom: 10px;
     cursor: pointer;
     box-shadow: 0 0 1rem var(--main-color);
     color: var(--main-color);
     background: var(--bg-color);
 
     h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         font-weight: 700;
         line-height: 1.3;
-        padding: 30px;
+        padding: 20px;
         text-align: center;
         transition: all .5s linear;
     }
 }
 
 .servicesBtn:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
+    background: var(--yellow-color);
+    color: #000;
 }
 
 .services {
-    margin-bottom: -8rem;
+    min-height: 50vh;
     animation: slideServiceRight 0.8s ease forwards;
+    background: var(--snd-bg-color);
 
     .services-container {
         display: flex;
@@ -271,7 +279,7 @@ section {
             padding: 3rem 2rem 4rem;
             border-radius: 2rem;
             text-align: center;
-            border: .2rem solid var(--bg-color);
+            border: .3rem solid var(--yellow-color);
             transition: .5s ease;
 
             svg {
@@ -288,14 +296,19 @@ section {
             }
 
             p {
-                font-size: 1.4rem;
+                font-size: 1.6rem;
                 margin: 2rem 0 2rem;
+                a {
+                    color: #0a0080;
+                }
             }
         }
 
         .services-box:hover {
+            background: var(--yellow-color);
             border-color: var(--main-color);
             transform: scale(1.02);
+            color: #000;
         }
     }
 
@@ -313,25 +326,24 @@ section {
 /**************************Skills*************************/
 
 .skillsBtn {
-    margin-top: 30px;
     cursor: pointer;
     box-shadow: 0 0 1rem var(--main-color);
     color: var(--main-color);
     background: var(--bg-color);
 
     h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         font-weight: 700;
         line-height: 1.3;
-        padding: 30px;
+        padding: 20px;
         text-align: center;
         transition: all .5s linear;
     }
 }
 
 .skillsBtn:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
+    background: var(--yellow-color);
+    color: #000;
 }
 
 .skills {
@@ -388,7 +400,7 @@ section {
         }
 
         .skills-box:hover {
-            border-color: var(--main-color);
+            border-color: var(--yellow-color);
             transform: scale(1.02);
         }
 
@@ -416,80 +428,172 @@ section {
 /**************************Education*************************/
 
 .educationBtn {
-    margin-top: 30px;
     cursor: pointer;
     box-shadow: 0 0 1rem var(--main-color);
     color: var(--main-color);
     background: var(--bg-color);
 
     h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         font-weight: 700;
         line-height: 1.3;
-        padding: 30px;
+        padding: 20px;
         text-align: center;
         transition: all .5s linear;
     }
 }
 
 .educationBtn:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
+    background: var(--yellow-color);
+    color: #000;
 }
 
-/**************************Certification*************************/
+.education {
+    min-height: 45vh;
+    animation: slideEducationRight 0.8s ease forwards;
+    background: var(--snd-bg-color);
 
-.certificationBtn {
-    margin-top: 30px;
-    cursor: pointer;
-    box-shadow: 0 0 1rem var(--main-color);
-    color: var(--main-color);
-    background: var(--bg-color);
+    .education-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
 
-    h1 {
-        font-size: 5rem;
-        font-weight: 700;
-        line-height: 1.3;
-        padding: 30px;
-        text-align: center;
-        transition: all .5s linear;
+        .education-box {
+            flex: 1 1 30rem;
+            background: var(--snd-bg-color);
+            padding: 3rem 2rem 4rem;
+            border-radius: 2rem;
+            text-align: center;
+            border: .3rem solid var(--yellow-color);
+            transition: .5s ease;
+
+            h3 {
+                font-size: 2.6rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+                margin: 2rem 0 2rem;
+            }
+        }
+
+        .education-box:hover {
+            background: var(--yellow-color);
+            border: .3rem solid var(--main-color);
+            transform: scale(1.02);
+            color: #000;
+        }
     }
-}
 
-.certificationBtn:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
+    @keyframes slideEducationRight {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
 }
 
 /**************************Contact*************************/
 
 .contactBtn {
-    margin-top: 30px;
     cursor: pointer;
     box-shadow: 0 0 1rem var(--main-color);
     color: var(--main-color);
     background: var(--bg-color);
 
     h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         font-weight: 700;
         line-height: 1.3;
-        padding: 30px;
+        padding: 20px;
         text-align: center;
         transition: all .5s linear;
     }
 }
 
 .contactBtn:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
+    background: var(--yellow-color);
+    color: #000;
+}
+
+.contact {
+    min-height: 23vh;
+    animation: slideContactRight 0.8s ease forwards;
+    background: var(--snd-bg-color);
+
+    p {
+        font-size: 2.1rem;
+        text-align: center;
+        a {
+            color: #0a0080;
+        }
+    }
+
+    .social-media-contact {
+        text-align: center;
+
+        img {
+            width: 30px;
+            transition: transform 0.5s ease;
+        }
+
+        a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            background: transparent;
+            border-radius: 50%;
+            font-size: 2rem;
+            color: var(--main-color);
+            margin: 1rem 1.5rem 0 0;
+            transition: .5s ease;
+
+            &:hover img {
+                transform: scale(1.5);
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    @keyframes slideContactRight {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+/**************************Responsive*************************/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+
+    .footer-text {
+        font-size: 1.6rem;
+    }
 }
 
 /**************************Responsive*************************/
 
 @media (max-width: 991px) {
     section {
-        padding: 10rem 3%;
+        padding: 6rem 3%;
     }
 
     .services {
@@ -497,9 +601,9 @@ section {
         margin-bottom: 0;
     }
 
-    .skills {
-        padding-bottom: 7rem;
-        padding-top: 4rem;
+    .education {
+        padding: 2rem;
+        margin-bottom: 0;
     }
 }
 
@@ -542,9 +646,11 @@ section {
 
     .aboutBtn h1,
     .servicesBtn h1,
-    .skillsBtn h1 {
+    .skillsBtn h1,
+    .educationBtn h1,
+    .contactBtn h1 {
         padding: 9px;
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 
     .about {

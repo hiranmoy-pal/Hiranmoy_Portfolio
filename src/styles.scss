@@ -10,10 +10,11 @@
 }
 
 :root {
-    --bg-color: #191f36;
-    --snd-bg-color : #262B40;
+    --bg-color: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);;
+    --snd-bg-color : linear-gradient(316deg, #50d8d7 0%, #923993 74%);
     --text-color : #fff;
     --main-color : #59B2F4;
+    --yellow-color: rgb(248, 203, 116)
 }
 
 html{

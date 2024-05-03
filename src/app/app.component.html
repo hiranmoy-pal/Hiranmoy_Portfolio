@@ -90,7 +90,7 @@
       </svg>
       <h3>App Development</h3>
       <p>I'm developing <strong><em><a href="https://www.aaroananda.com/" target="_blank">Aaro Ananda</a></em></strong>,
-        a digital platform both website and app, using the Ionic framework and Angular technology. It celebrates all
+        a digital platform both <strong>website</strong> and <strong>app</strong>, using the Ionic framework and Angular technology. It celebrates all
         facets of Bengali culture, featuring content on literature, music, movies, cuisine, fashion, games, news, and
         beyond.</p>
     </div>
@@ -188,17 +188,26 @@
 </div>
 
 <section *ngIf="educationOpen" class="education" id="education">
-
-</section>
-
-<!-- ************************* Certification **************************** -->
-
-<div class="certificationBtn" (click)="toggleCertification()">
-  <h1>Certification</h1>
-</div>
-
-<section *ngIf="certificationOpen" class="certification" id="certification">
-
+  <div class="education-container">
+    <div class="education-box">
+      <h3>Graduation</h3>
+      <p><span>Year of passing : </span>2020</p>
+      <p><span>Percentage : </span>73.50%</p>
+      <p><span>University : </span>CU</p>
+    </div>
+    <div class="education-box">
+      <h3>Higher Secondary</h3>
+      <p><span>Year of passing : </span>2017</p>
+      <p><span>Percentage : </span>75.20%</p>
+      <p><span>Board : </span>WBCHSE</p>
+    </div>
+    <div class="education-box">
+      <h3>Secondary</h3>
+      <p><span>Year of passing : </span>2015</p>
+      <p><span>Percentage : </span>83.50%</p>
+      <p><span>University : </span>WBBSE</p>
+    </div>
+  </div>
 </section>
 
 <!-- ************************* Contact **************************** -->
@@ -208,7 +217,30 @@
 </div>
 
 <section *ngIf="contactOpen" class="contact" id="contact">
-
+  <p>Contact me at <a href="mailto:palhiranmoy1999@gmail.com">palhiranmoy1999@gmail.com</a> , or hit me up on
+    social-media.
+  </p>
+  <div class="social-media-contact">
+    <a href="https://www.facebook.com/profile.php?id=100010327479080&mibextid=2JQ9oc" target="_blank" title="Facebook">
+      <img src="assets/images/fb.png" alt="Facebook share">
+    </a>
+    <a href="https://www.instagram.com/pal_hiranmoy99?igsh=dHFiemUwNGFjZjh1" target="_blank" title="Instagram">
+      <img src="assets/images/insta.jpg" alt="Instagram share">
+    </a>
+    <a href="https://x.com/HiranmoyPal10?t=k872V6YvcvSIZeSZs5G4Jg&s=09" target="_blank" title="Twitter">
+      <img src="assets/images/twitter-x-white-logo.png" alt="Twitter share">
+    </a>
+    <a href="https://www.linkedin.com/in/hiranmoypal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      target="_blank" title="LinkedIn">
+      <img src="assets/images/linkedIn.jpg" alt="LinkedIn share">
+    </a>
+  </div>
 </section>
 
 <!-- ************************* Footer **************************** -->
+
+<footer class="footer">
+  <div class="footer-text">
+    <p>h!rÅñMø¥ © {{currentYear}}</p>
+  </div>
+</footer>

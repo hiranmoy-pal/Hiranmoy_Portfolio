@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
   educationOpen: boolean = false;
   certificationOpen: boolean = false;
   contactOpen: boolean = false;
+  currentYear: any;
+
 
   constructor(
   ) { }
@@ -32,6 +34,8 @@ export class AppComponent implements OnInit {
       backDelay: 1000,
       loop: true
     });
+
+    this.currentYear = new Date().getFullYear();
   }
 
   /****************** Download Cv *********************/
@@ -115,20 +119,6 @@ export class AppComponent implements OnInit {
         const educationSection = document.getElementById('education');
         if (educationSection) {
           educationSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-  }
-
-  /****************** Open Certification *********************/
-
-  toggleCertification() {
-    this.certificationOpen = !this.certificationOpen;
-    if (this.certificationOpen) {
-      setTimeout(() => {
-        const certificationSection = document.getElementById('certification');
-        if (certificationSection) {
-          certificationSection.scrollIntoView({ behavior: 'smooth' });
         }
       }, 100);
     }
