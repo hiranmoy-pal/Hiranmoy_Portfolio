@@ -113,7 +113,7 @@ section {
 
     .getResume:hover {
         color: #000;
-        background: var(--snd-bg-color);
+        background: linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%);
     }
 
 }
@@ -221,6 +221,7 @@ section {
         p {
             font-size: 1.6rem;
             margin: 2rem 0 3rem;
+
             a {
                 color: #0a0080;
             }
@@ -298,6 +299,7 @@ section {
             p {
                 font-size: 1.6rem;
                 margin: 2rem 0 2rem;
+
                 a {
                     color: #0a0080;
                 }
@@ -529,6 +531,7 @@ section {
     p {
         font-size: 2.1rem;
         text-align: center;
+
         a {
             color: #0a0080;
         }
