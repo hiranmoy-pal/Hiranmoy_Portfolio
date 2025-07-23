@@ -8,7 +8,7 @@ import Typed from 'typed.js';
 })
 export class AppComponent implements OnInit {
   title = 'Hiranmoy_Portfolio';
-  pdfUrl: any = 'assets/pdf/CV_Hiranmoy.pdf';
+  pdfUrl: any = 'assets/pdf/Hiranmoy_Pal_Resume.pdf';
   blobUrl: any;
   a: any;
   aboutOpen: boolean = false;
